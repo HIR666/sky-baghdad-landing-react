@@ -6,6 +6,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardMedia,
   Container,
   Grid,
   Stack,
@@ -26,6 +27,7 @@ export function HomePage({ content }) {
       <Box sx={{ py: { xs: 5, md: 8 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
+            <CardMedia src={home.intro.image} component="img" height={300} />
             <CardContent>
               <Typography variant="h4" sx={{ fontWeight: 900 }}>
                 {home.intro.title}
@@ -49,7 +51,7 @@ export function HomePage({ content }) {
               <Box
                 component="img"
                 src={asset3}
-                sx={{ width: "100%", borderRadius: 2 }}
+                sx={{ width: "100%", borderRadius: 0.5 }}
               />
             </Grid>
             <Grid item xs={12} md={7}>
@@ -101,6 +103,7 @@ export function HomePage({ content }) {
             {home.ctas.map((c, idx) => (
               <Grid item xs={12} md={4} key={idx}>
                 <Card variant="outlined" sx={{ height: "100%" }}>
+                  <CardMedia src={c.image} component="img" />
                   <CardContent>
                     <Typography variant="h5" sx={{ fontWeight: 900 }}>
                       {c.title}
@@ -142,6 +145,7 @@ export function HomePage({ content }) {
       <Box sx={{ py: { xs: 5, md: 10 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
+            <CardMedia src={home.landscape.image} component="img" />
             <CardContent>
               <Stack spacing={2}>
                 <Typography variant="h4" sx={{ fontWeight: 900 }}>

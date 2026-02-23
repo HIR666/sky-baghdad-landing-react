@@ -29,7 +29,7 @@ export default function App() {
         {/* Header with theme toggle */}
         <Header mode={mode} setMode={setMode} />
 
-        <AppLayout content={skyBaghdadContent}>
+        <AppLayout content={skyBaghdadContent} mode={mode}>
           <Routes>
             <Route
               path="/"

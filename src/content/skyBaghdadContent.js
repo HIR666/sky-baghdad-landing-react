@@ -1,3 +1,8 @@
+import asset9 from "../assets/Asset-9.png";
+import asset10 from "../assets/Asset-10.png";
+import asset11 from "../assets/Asset-11.webp";
+import asset71 from "../assets/Asset-7-1.jpeg";
+import asset81 from "../assets/Asset-8-1.webp";
 export const skyBaghdadContent = {
   brand: "Sky Baghdad",
   nav: [
@@ -22,6 +27,7 @@ export const skyBaghdadContent = {
     intro: {
       title: "مجمع سكاي بغداد السكني",
       subtitle: "حقبة جديدة من الحياة الفاخرة",
+      image: asset81,
     },
     aboutCompany: {
       title: "عن الشركة",
@@ -40,22 +46,26 @@ export const skyBaghdadContent = {
         title: "سكاي بغداد",
         subtitle: "عنوان الفخامة",
         action: { label: "المزيد عن سكاي بغداد", to: "/about" },
+        image: asset9,
       },
       {
         title: "سكاي بغداد",
         subtitle: "عنوان الفخامة",
         action: { label: "قم بتحميل كتلوك", href: "#" },
+        image: asset10,
       },
       {
         title: "سكاي بغداد",
         subtitle: "عنوان الفخامة",
         action: { label: "قم بالتواصل", to: "/contact" },
+        image: asset71,
       },
     ],
     landscape: {
       title: "استمتع بمرافق وتجارب تفوق الخيال في منطقة الاندسكيب",
       body: "ستجد منطقة كبيرة مخصصة للحدائق وللجلسات التي تناسب كافة الاعمار بالإضافة لمنطقة خاصة بالأطفال ع والمساحات الخضراء والنافورات والمسطحات المائية ومساحات الخضراء والنافورات والمسطحات المائية ومساحات الجري لمزيد من الشكل الجمالي",
       secondaryCta: { label: "قم بتحميل كتلوك", href: "#" },
+      image: asset11,
     },
   },
   about: {

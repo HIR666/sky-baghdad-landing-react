@@ -35,28 +35,59 @@ export default function Header({ mode, setMode }) {
   return (
     <>
       <AppBar position="fixed" elevation={2}>
-        <Toolbar sx={{ display: "flex", alignItems: "center" }}>
+        <Toolbar sx={{ position: "relative" }}>
           {/* MOBILE: Hamburger */}
           <IconButton
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            sx={{ display: { xs: "flex", md: "none" } }}
             color="inherit"
             onClick={toggleDrawer(true)}
           >
             <MenuIcon />
           </IconButton>
 
-          {/* DESKTOP: Logo + Nav */}
+          {/* MOBILE: Centered Title (ABSOLUTE CENTER) */}
+          <Typography
+            variant="h6"
+            component={Link}
+            to="/"
+            sx={{
+              display: { xs: "flex", md: "none" },
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
+              textDecoration: "none",
+              fontWeight: 800,
+              color: "inherit",
+            }}
+          >
+            سكاي بغداد
+          </Typography>
+
+          {/* MOBILE: Logo (Right) */}
+          <Box
+            component="img"
+            src={mode === "dark" ? beigeLogo : navyLogo}
+            alt="Sky Baghdad"
+            sx={{
+              height: 48,
+              display: { xs: "flex", md: "none" },
+              marginLeft: "auto",
+            }}
+          />
+
+          {/* DESKTOP */}
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
               alignItems: "center",
               gap: 2,
+              flexGrow: 1,
             }}
           >
             <Link to="/">
               <Box
                 component="img"
-                src={mode === "dark" ? beigeLogo : navyLogo} // You can use a different logo for dark mode if you have one
+                src={mode === "dark" ? beigeLogo : navyLogo}
                 alt="Sky Baghdad"
                 sx={{ height: 64 }}
               />
@@ -75,26 +106,9 @@ export default function Header({ mode, setMode }) {
             ))}
           </Box>
 
-          {/* MOBILE: Center title */}
-          <Typography
-            variant="h6"
-            component={Link}
-            to="/"
-            sx={{
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              textAlign: "center",
-              textDecoration: "none",
-              fontWeight: 800,
-              color: "inherit",
-            }}
-          >
-            Sky Baghdad
-          </Typography>
-
-          {/* DESKTOP: Theme toggle */}
+          {/* DESKTOP Theme Toggle */}
           <IconButton
-            sx={{ display: { xs: "none", md: "flex" }, ml: "auto" }}
+            sx={{ display: { xs: "none", md: "flex" } }}
             color="inherit"
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
           >
@@ -103,10 +117,8 @@ export default function Header({ mode, setMode }) {
         </Toolbar>
       </AppBar>
 
-      {/* MOBILE DRAWER */}
       <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 260 }}>
-          {/* Theme toggle inside drawer */}
           <Box sx={{ p: 2, textAlign: "center" }}>
             <IconButton
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

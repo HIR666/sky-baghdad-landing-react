@@ -82,7 +82,7 @@ const lightTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 20,
+          borderRadius: 4,
           border: "1px solid rgba(15, 50, 73, 0.08)",
         },
       },
