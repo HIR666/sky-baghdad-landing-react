@@ -126,6 +126,8 @@ export function HomePage({ content }) {
                         <Button
                           variant="contained"
                           component="a"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href={c.action.href}
                           sx={{ fontWeight: 800 }}
                         >

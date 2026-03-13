@@ -9,6 +9,9 @@ import {
   Typography,
 } from "@mui/material";
 
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
+
 import space1 from "../assets/spaces-1.webp";
 import space2 from "../assets/spaces-2.webp";
 import space3 from "../assets/spaces-3.webp";
@@ -17,6 +20,46 @@ import space5 from "../assets/spaces-5.webp";
 import space6 from "../assets/spaces-6.webp";
 
 export function SpacesPage() {
+  const images = [space1, space2, space3, space4, space5, space6];
+  const [imageSizes, setImageSizes] = React.useState({});
+
+  React.useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#spaces-gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
+  React.useEffect(() => {
+    Promise.all(
+      images.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () =>
+            resolve({
+              src,
+              width: img.naturalWidth,
+              height: img.naturalHeight,
+            });
+          img.src = src;
+        });
+      }),
+    ).then((results) => {
+      const map = {};
+      results.forEach((r) => {
+        map[r.src] = { width: r.width, height: r.height };
+      });
+      setImageSizes(map);
+    });
+  }, []);
+
   const spaces = [
     {
       title: "TYPE A — 222.22 م²",
@@ -127,14 +170,12 @@ export function SpacesPage() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 4, md: 6 } }}>
+    <Box sx={{ py: { xs: 4, md: 6 } }} id="spaces-gallery">
       <Container maxWidth="lg">
         <Stack spacing={{ xs: 4, md: 6 }}>
-          {spaces.map((space, index) => {
-            const isEven = index % 2 === 0;
-
-            // 🔥 Fix RTL/LTR issue for TYPE titles
+          {spaces.map((space) => {
             const [typePart, sizePart] = space.title.split("—");
+            const size = imageSizes[space.image];
 
             return (
               <Grid
@@ -142,25 +183,30 @@ export function SpacesPage() {
                 spacing={6}
                 alignItems="center"
                 key={space.title}
-                direction={{
-                  xs: "column",
-                  // md: isEven ? "row-reverse" : "row",
-                  md: "row-reverse",
-                }}
+                direction={{ xs: "column", md: "row-reverse" }}
               >
                 {/* Image */}
                 <Grid item xs={12} md={6}>
-                  <Box
-                    component="img"
-                    src={space.image}
-                    alt={space.title}
-                    sx={{
-                      width: "100%",
-                      height: "auto", // ✅ keeps ratio
-                      display: "block",
-                      borderRadius: 0, // ✅ no rounding
-                    }}
-                  />
+                  <a
+                    href={space.image}
+                    data-pswp-width={size?.width || 1600}
+                    data-pswp-height={size?.height || 900}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Box
+                      component="img"
+                      src={space.image}
+                      alt={space.title}
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                        borderRadius: 0,
+                        cursor: "zoom-in",
+                      }}
+                    />
+                  </a>
                 </Grid>
 
                 {/* Text */}

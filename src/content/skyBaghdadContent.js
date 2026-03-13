@@ -51,7 +51,10 @@ export const skyBaghdadContent = {
       {
         title: "سكاي بغداد",
         subtitle: "عنوان الفخامة",
-        action: { label: "قم بتحميل كتلوك", href: "#" },
+        action: {
+          label: "تحميل كتلوك",
+          href: "https://ratback.tdelta.net/public/uzf/1/cwpgnpy9wdt/SKY-BAGHDAD.pdf",
+        },
         image: asset10,
       },
       {
@@ -64,7 +67,10 @@ export const skyBaghdadContent = {
     landscape: {
       title: "استمتع بمرافق وتجارب تفوق الخيال في منطقة الاندسكيب",
       body: "ستجد منطقة كبيرة مخصصة للحدائق وللجلسات التي تناسب كافة الاعمار بالإضافة لمنطقة خاصة بالأطفال ع والمساحات الخضراء والنافورات والمسطحات المائية ومساحات الخضراء والنافورات والمسطحات المائية ومساحات الجري لمزيد من الشكل الجمالي",
-      secondaryCta: { label: "قم بتحميل كتلوك", href: "#" },
+      secondaryCta: {
+        label: "تحميل كتلوك",
+        href: "https://ratback.tdelta.net/public/uzf/1/cwpgnpy9wdt/SKY-BAGHDAD.pdf",
+      },
       image: asset11,
     },
   },
