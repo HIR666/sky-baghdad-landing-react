@@ -63,7 +63,7 @@ export function ContactPage({ content }) {
                   >
                     <Box
                       component="iframe"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.120930269543!2d44.34977067871169!3d33.31565380829642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f000eb3afaf%3A0x282f34baeee926e7!2z2KjZiNin2KjYqSDYp9iz2YrYpyDZhdio2YrYudin2Kog2YXYrNmF2Lkg2LPZg9in2Yog2KjYutiv2KfYrw!5e0!3m2!1sen!2siq!4v1771630468811!5m2!1sen!2siq"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5830.168498484869!2d44.364551655477506!3d33.32563496211372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f7e9dfe98ff19%3A0x5cded588ae02d9a0!2z2YXYrNmF2Lkg2LPZg9in2Yog2KjYutiv2KfYryDYp9mE2LPZg9mG2Yo!5e0!3m2!1sen!2siq!4v1772717566252!5m2!1sen!2siq"
                       sx={{
                         width: "100%",
                         height: "100%",

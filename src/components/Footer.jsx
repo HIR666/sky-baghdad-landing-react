@@ -35,7 +35,7 @@ export default function Footer({ mode }) {
       <Box sx={{ mb: 2 }}>
         <IconButton
           component="a"
-          href="#"
+          href="https://www.instagram.com/skybaghdad.iq"
           target="_blank"
           color="primary"
           sx={{
@@ -54,7 +54,7 @@ export default function Footer({ mode }) {
 
         <IconButton
           component="a"
-          href="#"
+          href="https://www.facebook.com/p/%D9%85%D8%AC%D9%85%D8%B9-%D8%B3%D9%83%D8%A7%D9%8A-%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-61560073637024/"
           target="_blank"
           color="primary"
           sx={{
@@ -73,7 +73,7 @@ export default function Footer({ mode }) {
 
         <IconButton
           component="a"
-          href="#"
+          href="https://wa.me/9647833338090"
           target="_blank"
           color="primary"
           sx={{

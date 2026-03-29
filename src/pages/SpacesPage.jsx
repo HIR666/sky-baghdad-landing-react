@@ -62,7 +62,7 @@ export function SpacesPage() {
 
   const spaces = [
     {
-      title: "TYPE A — 222.22 م²",
+      title: "TYPE A — 227.664 م²",
       image: space1,
       content: [
         "الممرات — 14.87 م²",
@@ -81,7 +81,7 @@ export function SpacesPage() {
       ],
     },
     {
-      title: "TYPE B — 183.17 م²",
+      title: "TYPE B — 187.476 م²",
       image: space2,
       content: [
         "الممرات — 22.54 م²",
@@ -98,7 +98,7 @@ export function SpacesPage() {
       ],
     },
     {
-      title: "TYPE C — 201.2 م²",
+      title: "TYPE C — 206.028 م²",
       image: space3,
       content: [
         "الممرات — 19.60 م²",
@@ -116,7 +116,7 @@ export function SpacesPage() {
       ],
     },
     {
-      title: "TYPE D — 169.54 م²",
+      title: "TYPE D — 173.46 م²",
       image: space4,
       content: [
         "الممرات — 9.98 م²",
@@ -131,7 +131,7 @@ export function SpacesPage() {
       ],
     },
     {
-      title: "TYPE E — 199.17 م²",
+      title: "TYPE E — 203.94 م²",
       image: space5,
       content: [
         "الممرات — 19.59 م²",
@@ -150,7 +150,7 @@ export function SpacesPage() {
       ],
     },
     {
-      title: "TYPE F — 169.54 م²",
+      title: "TYPE F — 203.94 م²",
       image: space6,
       content: [
         "الممرات — 19.59 م²",
