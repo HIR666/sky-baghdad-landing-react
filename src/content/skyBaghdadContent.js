@@ -43,24 +43,33 @@ export const skyBaghdadContent = {
     },
     ctas: [
       {
-        title: "سكاي بغداد",
-        subtitle: "عنوان الفخامة",
-        action: { label: "المزيد عن سكاي بغداد", to: "/about" },
+        title: "تعرّف على سكاي بغداد",
+        subtitle:
+          "اكتشف فلسفة التصميم، جودة التنفيذ، والرؤية التي تجعل سكاي بغداد وجهة سكنية مميزة.",
+        action: {
+          label: "المزيد عن سكاي بغداد",
+          to: "/about",
+        },
         image: asset9,
       },
       {
-        title: "سكاي بغداد",
-        subtitle: "عنوان الفخامة",
+        title: "حمّل الكتالوج",
+        subtitle:
+          "استعرض المخططات، تفاصيل الشقق، المواصفات، والخدمات في دليل المشروع الكامل.",
         action: {
-          label: "تحميل كتلوك",
+          label: "تحميل الكتالوج",
           href: "https://ratback.tdelta.net/public/uzf/1/cwpgnpy9wdt/E_-_Catalog_SKY_BAGHDAD.pdf",
         },
         image: asset10,
       },
       {
-        title: "سكاي بغداد",
-        subtitle: "عنوان الفخامة",
-        action: { label: "قم بالتواصل", to: "/contact" },
+        title: "احجز موعد زيارتك",
+        subtitle:
+          "تواصل مع فريقنا للإجابة عن استفساراتك، أو لحجز زيارة للمشروع واختيار وحدتك المناسبة.",
+        action: {
+          label: "تواصل معنا",
+          to: "/contact",
+        },
         image: asset71,
       },
     ],
