@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import asset3 from "../assets/Asset-3.png";
 import HeroCarousel from "../components/HeroCarousel";
+import VirtualTourSection from "../components/VirtualTourSection";
 
 export function HomePage({ content }) {
   const { home } = content;
@@ -24,7 +25,7 @@ export function HomePage({ content }) {
       <HeroCarousel />
 
       {/* Intro */}
-      <Box sx={{ py: { xs: 5, md: 8 } }}>
+      {/* <Box sx={{ py: { xs: 5, md: 8 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
             <CardMedia src={home.intro.image} component="img" height={300} />
@@ -42,6 +43,19 @@ export function HomePage({ content }) {
           </Card>
         </Container>
       </Box>
+
+      <Container maxWidth="lg" sx={{ py: 10 }}>
+        <Typography variant="h3" align="center" fontWeight={700} mb={2}>
+          جولة افتراضية
+        </Typography>
+
+        <Typography align="center" color="text.secondary" mb={5}>
+          تجوّل داخل الشقة افتراضياً، واستكشف كل زاوية وأنت في مكانك.
+        </Typography>
+
+        <VirtualTourSection />
+      </Container> */}
+      <VirtualTourSection home={home} />
 
       {/* About company */}
       <Box sx={{ py: { xs: 5, md: 8 } }}>
