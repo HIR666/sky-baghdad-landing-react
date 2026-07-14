@@ -81,6 +81,7 @@ const HeroCarousel = () => {
               component={RouterLink}
               to="/contact"
               sx={{ fontWeight: 800 }}
+              style={{ marginLeft: 10 }}
             >
               قم بالتواصل
             </Button>

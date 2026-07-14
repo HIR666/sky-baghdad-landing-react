@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 
@@ -14,8 +14,46 @@ import { SpacesPage } from "./pages/SpacesPage";
 import { ContactPage } from "./pages/ContactPage";
 import Header from "./components/Header";
 
+const getInitialMode = () => {
+  const savedMode = localStorage.getItem("themeMode");
+
+  if (savedMode === "light" || savedMode === "dark") {
+    return savedMode;
+  }
+
+  if (window.matchMedia?.("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+
+  return "light";
+};
+
 export default function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState(getInitialMode);
+
+  useEffect(() => {
+    localStorage.setItem("themeMode", mode);
+  }, [mode]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia?.("(prefers-color-scheme: dark)");
+
+    if (!mediaQuery) return;
+
+    const handleSystemThemeChange = (event) => {
+      const savedMode = localStorage.getItem("themeMode");
+
+      if (savedMode !== "light" && savedMode !== "dark") {
+        setMode(event.matches ? "dark" : "light");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    };
+  }, []);
 
   const theme = useMemo(
     () => (mode === "light" ? lightTheme : darkTheme),
@@ -26,7 +64,6 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        {/* Header with theme toggle */}
         <Header mode={mode} setMode={setMode} />
 
         <AppLayout content={skyBaghdadContent} mode={mode}>
