@@ -23,7 +23,7 @@ export function AboutPage({ content }) {
         </Stack>
 
         {/* Alternating rows */}
-        <Stack spacing={{ xs: 8, md: 12 }}>
+        <Stack spacing={{ xs: 3, md: 4 }}>
           {sections.map((s, index) => {
             const isEven = index % 2 === 0;
 

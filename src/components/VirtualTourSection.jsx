@@ -92,7 +92,7 @@ export default function VirtualTourSection() {
       component="section"
       dir="rtl"
       sx={{
-        py: { xs: 7, md: 11 },
+        py: { xs: 3, md: 5 },
         bgcolor: "background.default",
       }}
     >

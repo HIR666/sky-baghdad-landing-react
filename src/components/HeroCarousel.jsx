@@ -26,7 +26,13 @@ const HeroCarousel = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <Box sx={{ position: "relative", height: { xs: 520, md: 650 } }}>
+    <Box
+      sx={{
+        position: "relative",
+        height: { xs: 520, md: 650 },
+        mt: { md: 7, sm: 5, xs: 3 },
+      }}
+    >
       {/* Background images */}
       <AnimatePresence initial={false}>
         <motion.div

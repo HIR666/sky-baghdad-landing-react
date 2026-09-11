@@ -25,7 +25,7 @@ export function HomePage({ content }) {
       <HeroCarousel />
 
       {/* Intro */}
-      {/* <Box sx={{ py: { xs: 5, md: 8 } }}>
+      {/* <Box sx={{ py: { xs: 2, md: 3 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
             <CardMedia src={home.intro.image} component="img" height={300} />
@@ -58,7 +58,7 @@ export function HomePage({ content }) {
       <VirtualTourSection home={home} />
 
       {/* About company */}
-      <Box sx={{ py: { xs: 5, md: 8 } }}>
+      <Box sx={{ py: { xs: 2, md: 3 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={3}>
             <Grid item xs={12} md={5}>
@@ -85,7 +85,7 @@ export function HomePage({ content }) {
       </Box>
 
       {/* Lifestyle */}
-      <Box sx={{ py: { xs: 5, md: 8 } }}>
+      <Box sx={{ py: { xs: 2, md: 3 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
             <CardContent>
@@ -111,7 +111,7 @@ export function HomePage({ content }) {
       </Box>
 
       {/* CTA cards */}
-      <Box sx={{ py: { xs: 5, md: 8 } }}>
+      <Box sx={{ py: { xs: 2, md: 3 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={3}>
             {home.ctas.map((c, idx) => (
@@ -158,7 +158,7 @@ export function HomePage({ content }) {
       </Box>
 
       {/* Landscape */}
-      <Box sx={{ py: { xs: 5, md: 10 } }}>
+      <Box sx={{ py: { xs: 2, md: 3 } }}>
         <Container maxWidth="lg">
           <Card variant="outlined">
             <CardMedia src={home.landscape.image} component="img" />
