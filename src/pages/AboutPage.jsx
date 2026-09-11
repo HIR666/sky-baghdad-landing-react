@@ -2,12 +2,14 @@ import * as React from "react";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
 import about1 from "../assets/about-1.jpg";
+import about2 from "../assets/about-2.jpg";
+import about3 from "../assets/about-3.jpg";
 import about4 from "../assets/about-4.jpg";
 import about5 from "../assets/about-5.jpg";
 
 export function AboutPage({ content }) {
   const sections = content.about.sections;
-  const images = [about1, about1, about1, about4, about5];
+  const images = [about1, about2, about3, about4, about5];
 
   return (
     <Box sx={{ py: { xs: 6, md: 10 } }}>
